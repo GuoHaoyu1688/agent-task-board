@@ -1,0 +1,12 @@
+timezone = "Asia/Shanghai"
+data_dir = "data"
+lease_seconds = 900
+retry_base_seconds = 30
+
+[hooks]
+enabled = false
+allow_network = false
+# Commands must be a trusted argv array; task JSON arrives on stdin.
+# command = ["python3", "/path/to/your/trusted_hook.py"]
+# Network access requires BOTH enabled=true and allow_network=true.
+# webhook = "http://127.0.0.1:9999/completed"

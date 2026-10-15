@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agent Task Board</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body><header><div><p class="eyebrow">LOCAL WORKSPACE / OPERATIONS</p><h1>Agent Task Board</h1>
+<p class="subtitle">Clear ownership. Visible progress. A shared place to finish work.</p></div><span id="mode" class="badge">Connecting</span></header>
+<main><section class="toolbar"><label>Agent <input id="agent" placeholder="All agents" autocomplete="off"></label>
+<button id="refresh">Refresh</button><span id="summary" aria-live="polite"></span><button id="add-toggle" class="primary">New task</button></section>
+<form id="new-task" hidden><h2>Create task</h2><div class="form-grid"><label>Title<input name="title" required maxlength="500"></label>
+<label>Queue<input name="queue" value="default" required></label><label>Priority<input name="priority" type="number" value="0"></label>
+<label>Assignee<input name="assignee" placeholder="Any available agent"></label><label>Due (local time)<input name="due_at" type="datetime-local"></label>
+<label class="check"><input name="needs_approval" type="checkbox"> Human approval required</label></div>
+<label>Description<textarea name="body" rows="3"></textarea></label><button class="primary">Create task</button></form>
+<p id="notice" role="status"></p><section id="board" class="board" aria-label="Task board"></section>
+<section id="detail" hidden><div class="detail-heading"><h2 id="detail-title"></h2><button id="close-detail">Close</button></div>
+<p id="detail-meta"></p><pre id="detail-body"></pre><div id="detail-actions"></div><h3>Event timeline</h3><ol id="timeline"></ol></section>
+</main><footer>SQLite · Offline by default · Auto-refresh every 10 seconds</footer></body></html>

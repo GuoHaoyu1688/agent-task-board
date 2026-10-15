@@ -1,0 +1,44 @@
+{
+  "tasks": [
+    {
+      "id": "01JGFJJZ000000000000000001",
+      "title": "Prepare example report",
+      "body": "Summarize the fictional sample rows.",
+      "queue": "report",
+      "priority": 3,
+      "tags": [
+        "example"
+      ],
+      "dedupe_key": "example-report",
+      "params": {
+        "rows": 10
+      },
+      "needs_approval": true,
+      "blocked_by": []
+    },
+    {
+      "id": "01JGFJJZ000000000000000002",
+      "title": "Create example digest",
+      "queue": "digest",
+      "priority": 1,
+      "blocked_by": [
+        "01JGFJJZ000000000000000001"
+      ],
+      "dedupe_key": "example-digest",
+      "params": {
+        "source": "approved report"
+      }
+    },
+    {
+      "id": "01JGFJJZ000000000000000003",
+      "title": "Check fictional input",
+      "queue": "default",
+      "priority": 2,
+      "dedupe_key": "example-check",
+      "params": {
+        "rows": 3
+      },
+      "blocked_by": []
+    }
+  ]
+}

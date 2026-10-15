@@ -1,0 +1,32 @@
+{
+  "ok": true,
+  "data": {
+    "id": "01JGFJJZ000000000000000003",
+    "title": "Check fictional input",
+    "body": "",
+    "queue": "default",
+    "assignee": null,
+    "priority": 2,
+    "due_at": null,
+    "dedupe_key": "example-check",
+    "status": "claimed",
+    "attempts": 1,
+    "max_attempts": 3,
+    "lease_owner": "example-worker",
+    "lease_token": "<claim-specific token; keep private>",
+    "lease_until": "2026-10-15T06:09:20.262070+00:00",
+    "available_at": "2026-10-15T05:54:20.261137+00:00",
+    "needs_approval": false,
+    "error": null,
+    "created_at": "2026-10-15T05:54:20.261161+00:00",
+    "updated_at": "2026-10-15T05:54:20.262073+00:00",
+    "tags": [],
+    "params": {
+      "rows": 3
+    },
+    "result": {},
+    "artifacts": [],
+    "blocked_by": []
+  },
+  "warnings": []
+}
